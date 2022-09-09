@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+	<title>Introduction to HTML</title>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="styles.css">
+		</head>
+    <body>
+<label class="switch">
+  <input type="checkbox" name="myCheckbox" onclick="myFunction()" checked>
+  <span class="slider round"></span>
+</label>
+<label for="myCheckbox">🌑</label>
+    <script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+            var image = document.getElementById('ig');
+            if (image.src.match("dark.png")) {
+                image.src = "white.png";
+            }
+            else {
+                image.src = "dark.png";
+            }
+            
+        }
+document.querySelectorAll('input[type="checkbox"]').forEach(function(checkbox) {
+    checkbox.addEventListener('change', function (event) {
+        let checkboxLabel = document.querySelector('label[for="'+checkbox.name+'"]');
+        if (checkboxLabel) checkboxLabel.textContent = checkbox.checked?"🌑":"☀️";
+    });
+});
+        
+</script>    	
+    	<center>
+    	<img id="ig" src="dark.png" width="170" height="170">
+<form action="home.php" method="POST">
+    <input type="text" id="n1" name="n1" placeholder="Enter username..." required/>
+    <input type="submit" value="🔍"/>
+</form>
+</center>
+<center>
+<em><p>Welcome...<br><br>Enter Your name to continue..</p></em>
+</center>
+<br>
+</body>
+</html>
